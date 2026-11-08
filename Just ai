@@ -1,0 +1,738 @@
+-- protected by rbx.lol
+local _z13_d3bef96 = "RBXE\001\000\001\002\000J\184B\243rv\168\221iRP\169\185\159\012\210\191\244\148\143\139\015\000\000\149r\1745|\030\220r\152\247\236~\248\225\128\246\185L)\200\1950\186}J\019\189s\000k^s\208\151\174\182\2108\1873\209@o\016 4\144sN\182\215\174PZ\194\007\217M\155M\245\133U{~d(\011F\145\133\145\016\003$\001\222\221\140-.\228n6\128\229\237=\208\197a\170\179t\005\214\009\176<\015\153\1815\216\143:#PR\208E\245[mtLG>\209]\193!\172I\024w9\201\229\184U\0204\2009\189t\211\004\138\183\\J\253\003\149\211\180\015\194N^\024\185\233n\223M\024\004\003e\218h\191\237\"\005\0068\031\222Ku[V\2004\238p\160\163\188\228\132\222\160|7\222J\206]\\\242\155\214\175X\218\136\009YZ\132\145\174j`\008\009\193\003\251\139R\214U\245\1618\009p\026\030p\007\193=\182\206\131\236FX\007z\129\025\130\025\199\216\232\240W3\159'\222\142\002\1433\148\023\161U\246\131,\234\1294=\231\187.\231\161?\013\130\249\023B\131\144`^8Vi\018B\151\187\014(8\154\156\236{\140\212C`O\191\"fn\235v^\020\234\027\198\17710\144\162C\1528RB\021&Px\1531\187\1763\020;\135\026\030j2\145\167\001\163o\172L\186l''\153j\217\253\161\186J\156\129\146#\236\199\128\242\186UrB:\0026|\184\242\193P[\171e\243WO\221o6\190\224O\006\161\030\2444\232\1561\000\009\1304i\237(\184\0265&>;\\\170\202\015|\170\021\029\188\235\1911\163\189O\022++\252\218jl}\157\202V\142\007A\138\217\219p\255\156\1316\007\127\028\190\223\251\196\015Y\146\209h\130\148s\245)\020Qkoz\206\190\221\196\150d'\169\176\170e\250^\236vR\239\005\197UY \008\185^\220\012\128\150\194\192o\013\222L\227\176\128Rs\028\003s\254\188\217\211\187\185\204\2153+\016\164\005Aw\023<B\246\172\154o\150\239\243\129#i\193r\026n\252l\023K.\191'\148\013\171\197\009\156A+\138B\241\253\222\178c\227>[\012`\158\217\199\170aP9\025\133\176\167f\1774\172\"A\231\182\201\234\232\171\198\000\202\2369\242'\\h\24134\230E\127\157\143\127C\022\010l\235\012\149\179\029\014\216\215\234\135\217\215\142\130q\224Mp\186\127\171\141vj\148\015\007\1602\182\178\187Y\238Fl\252+o\239\229X\174\203(X\219\149#\229\172:S\164\210\255\233\229@ie\134;\030\130=u\240\193\226\179+\152o\245X\0064\187!\002\213\152\141\214d\143\154\179W\159C\209\195\250\012\151\130S\170;\145\148'&xV\156p\245\228\213SW\030\169\242+\211\192\1736\170\127\1448\154\192\197\224\1735\165oD\134\203i#CZk)\129$\167\030\162o\172\128<F\178\174~\022\136\211\136C \172\204\140B\225\181\155P\007 #\2396\1990,\159(\203\197G\001\175\235(\206\"3\143\204O5s\150@+H\"[)\213O\014V>)J\026\020lX\164\254\248d\200\234\221\0283\167\184:[6\229\199\140\230\215\234\253'\141\0026U\187/\237qb\138\209\028=\008)[\213\219\023\154\244\221\128\147+io\196!\192)\145\019\179m\005\200\232+k\0026\157.\143Y\255i*\153\223\004\214Z/s8(\176\206q2~\191Bf\196\001\131\026,\214\202F\178\207\022\000r>{\213\199\163[\182s\029\152\030\0100T\173\191\152\175k\203\174N;\024]K\1426\204BK\190\224\254\220k\139\158\016\150\216rj\011\193)\227\235\242G-j\014\218z\019\004:\009\189\027m\199\230\219\025\163\254\006t\175\165\173\221\176US\237|\249\243\138\155d]#\129\031\236q\150\237\156\210\216\\\201fgq\015\2512\152$\193\137\237\201)\175q\235T\168\204\207L/{\148#\218wd\021\027\162D0|$\008`m\029\172\187P%b\153s?il\250\192\182\000P\246\197q\004<u\030\240\215\149\015\243\183\174\0083\243\023\170\192\186\158Q\154\170-\031\234+sY\171J\234/\018O\154\186\229\135Br\214\133\153x\185(@29\254\233\206\248\127p\145\1594Nv\254\011E\193\002\005\004\219\240.)\154D\031<Pn\224\205\1285?\158\002S(\181\014\163z\020\"\185\177In\216\138oU\172\233\189^Y>\222\238\006\225\165\220\216\2514\227\189\175\160\030\153\212\\\210\012l\139\008\138\029\002P\162\010r\208\004\235\\\1478\004\2220t\176g\177\185+\228TG74\237\004T\208\2420\206r\127Q\210{[\1767\151\003\009\157\022\200\157CWH\249\209\175d\196\013W\021\224\192\234]]\006\178\227\017\020a\198\254}\226\028\144\026\202\216\202\199\027\167\160\161p\209w\159\164\245\210\018\150\003VP\235.\009\150#\215\150\237\147\012\139\159\135Io\243\140\244\009\026n\012\1491\030\013\158\127\212\014b\2172\162<|\003c\019x\017e\008\004y\170\184$#\187\186\0205v\030\016vZ!\251\025\192\139`\135\255\196\140\179\197Zu\243\251rc\021\215\238\161z\140\246<\022\198\138\144\250'X\1466P\"\188l\214?\012wH8\237\138\222\025-\137jdiW\205\224\220\217\173\229\0085\191\020\131\183W\153\255_\"-_\154\2375\172\197|\245\131\129\169\129\153\020\133\136\166\000\012\180\216\168?D\240\2499\015E\196\029\235\171\224*D5\244\235\217T\131&\236^\230\181B\\\005\238rG=\141Y\030\007]\219H\018\162\030\236\017\159f\157hv \135\205.X\244\209\234\163`\225m\156\139a\006.\223\240\247*\193\012\235\181@p\152\227_\176\161\200|\187\241;\"\150]S\236\161\235(\182\202\132\197$\191\201\031\186\239)\192#y;`\190\160\236\216\162\211\222Qz\025d\159\028\193o\235`\132:\140\207l\175\169\151\1540\001\136\155\145\0262\007@g\159\190\154\252h+\255\029\203*q\222\200\240\007\029\009\194\248L\237\219Y\151j\184\142\251\204\143\2357#4oQ\223\233\009\142*y\0122pN\024\215\206\129\237\139\142\190\219\153\181\135\024{\190*\223\020\009\009\199\173\240/\234\018X&>\159\2303\144\165\031\020E\145\015\204\019\149\236\154\021Y\170\200\206p\129\176\151S\152``78\196>`\023\166\236z|\208\170\224S^/\140\022nU\219\161G\020~6\240\247,E2\141\200\237\211t\196 \168k\002\218\253\252\208Zz\158o\206\233\016n\023\170Y1{8f\159\008\217Y\233\023\008\187t\194Y\130\247\138\1694\189\184\206\223p\137\203\212\153r\000Y(\250]\217@\009\2062\028w\128\0111?\195j8\223\166\199i\179\167p\170\182\004\230VJ\132\158\208\1734|\129\240\024c\174\218R3\133b\006|y\191>1\240\156\253\247\238\158&\248v\141P0\133\237\026\133J\251p{\150\155\238m^eT\214z\229d*2v\244\164\238ud\186\149}c~]\131&\189(\229\024#\238\011\030\221`\194\177\227OT\247\208\210E\179\177\178>\022R\166(}\027\189$\145#\131\018\187\007\193g~\152\131\156\210*#\166\139\006\233T`5\241\163*\016\255@\205am\203\131f\005\155O\169}\216\015C=\248\248\166\184\240\134h\224C\021\215\184\009V\190=W\233\011\202\188\007\246w\160\007B\214ji\203g~_<\019k\135\222\130Y\181\172\222z#\213\000\231\143\181\166\146\142\013k\206\144\200\1299@\006\025?\210}g\247\030gU\174\135\162\167\156(\230\184;\206,\215\130\177/#\230$#\189\133\227QQ\174\011l\003\183V\016\005t(\209\231sS\128\186\227\175\130v!b\216\163\247\194G\225\133f\208\147\248a\238\011j8\205O\212xX\225\202\160%\001\216I\158\173\210\192\162\179`\017\177@\220Fq\210\130p\006P\234q\013O\233\243\010\\\202\222\028\127\172B\014\144\211\128\015x[\183~Sl=Bs\021\139\240\147|\181\230\238Y\243\143S\152\026\231\183\161\195\208\165\031\2294\242\224l\218l\212\158\177\196\008P0\014\223J\197\215\1411\031\167\198\201\171\205\214\157\247\005\247!\194\004Y\218u\175\228\183\214\000<l\129s\008\191%]\138\248\254\254\191\008t\141\250'W$Fjx\173\177\232\221\012{\154\244\025{5\225JL3\178\208\029\014\208\170\129FY\142\174{~up\169U\015!\154N\154\170)\030K\\\209\225\001\145>\186\251\241\129B\153\165gI\250\194\029BZ\024\164L\006\190\206\007\195\005yg\131\"/\184N\141!\201N\016\207\1890#\1394\180\184\147\144\253\245\238\1458\002{\175\164\010\12919\008\141&\1660@\148]a\224(\149zu\021\244\17939\147\1746\252c\201w\199\230\234\014\155V\211+\0009}W2\186SN\195\249\187\029P2?Cr[\162\169\136\206\146\0313\170\017+\201\245L]\153\169?p\007\016\205`+ .,\235\169\132\244\206\018m\253\002\139\248\147l1\242\155\191\156\195\187\216\\#\166\245!+V\011p_\254\215<B}\181^\161e\003d\002\190)\203\210\1463eg\241pE:\227\158\224\200\2013Q\175\210\242\255U\178\155\201\1386'@]\132\238\016\153\221\130-aT\217$\142l\225T\030\201\210PYIX?<J)\1650\195H\029\231\196,<\144\015\251\172O\163\217\021\0207J\130\139\232w\241&]pi\194R`\161\227[o\001\167\247S\177\027\251}\165\212\237\175\131=II\004f\156m4\128HAD\003\"\202\166\223\179\202\174)\139\159\023\195f\192\190\194U\016vud)Be\217\177z\154\148\025\167\129\190\018\1667%\206\228;g]=;\131\185\238\2255\214\028}XR\003\135;\221O\195\029+\214\141}o\154\163dT_\227z\247\233\14181\234\030]\183\200[\181J^\031\170\246z\016\145\144\136\007\177\007\245q\144e\016\205\217\1623\239.\182\147\155\207o\156\174\164\223\217\159\206\243!\151\209\193\241rO(\176o\177\242\243B\172\234\135<bJ\158{\133\200\241\177Dc\018\208Q\152\201]\215\206\171\0315\003\000\208{q\190\008\005\233\028\020>\140\193\167\147\250\175<\243#x\229\"\197\000\146\023\230\183#\019\0018E\203=Q?\224&k]\238V\152@P\238s\012=J\209^W]O\239\132\000\147\024O71#\006\001\252\161l\252:\180\136\159(Wp\169\213H\250\172\138\228\250i^i\2461\170\254\023J\220\\\192\128\188\255\251.1\230\000\182;Y\016\141\176VA\176c9Rs\210\1471\234\240S\151\027\1296W*\238\011\198\205\218\136]\000\019\199U\197\197\251GA\225\169\182FX\026\205c{p\185z\007\178b\133\174g\000Q\247\173\210&H\226\183\223\166 \242\133\225`\016\254%\147\146\216\253\014\185W\218K\251F\172-\193\137\180\255Y\020)\203h\198\207\143\136\230z\204j\209`f\2494\204?P5\022\227Pc\140E\128#r\198\019\147\178\225\181b\182\155\013\230\239\178\1650iU\173\209\155\192\167\140\201\227\250H\173\153\243\171\135a\163\215\234\202CiF\158\197\172\223I\243V\211\153\020\1802\179\213Vz\216B\128s\161Y\224\174\205\176:\249_\165\225\198\226\151\015\152\025Fs\227\176\223j\156\221~\238b\243\175@$qP?\177{\001\025\169x6f\140=\021\157\1769l\235*\238\164h\1510\157$\130\243\161VA\251\164\139\242\001\156I.vx\218\006E\175\1781\238\168T\028,C\019k\206\167\019\171K\225\134\203\014A\203\186\251f8\242J\002\197\2072/v\227\245b<\142{\024Wz\201\163f\221\162z\212?\23003\243\206\2447\031\024r/\225\190\1378\193\241\\\220\213\195\145Y\014\177\179\247\028\139\226\021\0008G\144\213\210\030A\133\003Tv\192\194,4\014y\202\164\132\248~\155\244\150c\180\006\157\138\014y\001\006\183\225\180\171\176w\001\188t4\014\165\181\204\158\\\025\163\138{\141m\170\025V\029\246\021Zl&0]$\029\201T\219\241D3V\140\178<\173PsU\145\025\170\157\186\179N\226\022\190\156\156\178Ro\000\129\235^\004\019\249\197\179\188\196v;\196:\002e\163\219\026\137q\220jy\202I\000\020J\169\232x\228\013J\197\171hd\230#\153S;\132\162E\191\188\204`\127\213\231WnB\007;``+T!\147\003J\248I\191\180\240D\236\012\013 \225\029\251q\164SZ\206N\134\221+\232\192<;X>\172A\130i]\156\195\230\141R\008\208'<S\015b^\226#\140\186#V\134\209\202^\196`\146\137R\138\171\234rpc/\166y-%Gf\165\146)\149\172Fv\006H\157\015\209-\213?\007\226\174q\167\026z\2174\255\138W\142\025\024o$x\204d\021\030\157eYu\152W2\182\234\137}\224\136o\129\182;\247\214_\142\209\172@\143\180*\181\127m\211\015`\155\155\000\195\197\009\223C\141\203\242h_\012Q\208Z\191[v{g\252\0133\179\028\024\232\019c\228A\214qH\200\239\147\142\254q\250\243Z\225\013\140\179\135!*]\229\219\218\016W\186\009\248\179^\165X\028Xw\139\208\201\177\224\012\169hf\007A6\212]\200\156~?\149Jy4K\235\176\170\255n\213O\178\195\027\161\158\225\009\187\007:5\180\254\223d\011\240\0170\187'\028\154a\155\169\193#l\200|!E\139|\176\024\188\165\148\229:\239\001e\221\200\225?%\021U!\174\170Mm(\171<\003LT\237\231\170\210\177\027\1365]:\166\140>1%:$\206\199PN\128\221\016p\024\255\141\148T\\\213\200\251\024\133?\232HO\210rk\149}\186\\b\178\244\188\183\003M\020I%\217\174(\201\219\\\214+\195h\250\143\202[\129\"Tr\171\158M\216m\211\190qU\170q\151\017\247\191;\030\159\196\1636x_\207\165\009\179\216\163\236\021\010tA\008\176\215\243\227\255\018?\205\208\134\211\149\204\195)\234\220\141\182\254\191\241(\239\240\012\171\028\209\193\215\1358\188\131\166o\021\232~\168\192CA\139\153\222-\016\213\174\220\172\243\221\142x\169i({\140\132\144\233\161\251\192\005,+\174\157\157\010*djD\217v;\185!i\176]\209\227\1669FA\130Z\251\129\222,\028X\160 T\213G\139\234\147\238Ed\002%6\225G\205\193Tk\191S\149\009\211\0268\022\022m\212\031\223\175c\127A\223b^\018#\029*\010\023\016\235\221y\188n\012\198\245\0222\246\172\151\151\182h\013\197\219\167\190\184\231\190\156a\129\188\143\179r\182e\173\147\024:\127Ui\001\175\016y\188S\187\131A\019\219\202\0099e\167"
+local _z28_d21aa77 = {21,132,95,4,3,30,116,184,115,156,114,45,137,34,111,220,239,81,206,181,65,220,77,190,240,76,33,254,184,157,33,214}
+local _z38_93ae651, _z33_e5ae31c, _z35_1e9fbaf, _z54_066688b, _z42_8a070ec, _z47_d418470, _z56_e9481aa, _z14_4d6ff2b, _z51_f4871c7, _z31_0573f6e, _z1_8433ee9, _z57_d1058c4, _z24_fa9bfa6, _z48_8863b02, _z17_760ac82, MAX_PROTOS, MAX_UPVALS, MAX_CONSTS, MAX_CODE, MAX_BYTES, MAX_POOL, _z6_ae6bcc3, _z45_579f6ee, _z26_0e07a47, _z39_a2d3b05, _z3_212af63, _z44_2796e9d, _z15_cc2cfc8, _z0_ece59ca, _z9_baa99f5, __SC, _z46_dbc0ba6, _z2_46dbd68
+local _z40_c12d58e = 13
+while true do
+if _z40_c12d58e == 21 then
+_z56_e9481aa = bit32.bxor
+_z40_c12d58e = 8
+elseif _z40_c12d58e == 27 then
+_z48_8863b02 = function(t, n)
+local parts, pi, i = {}, 0, 1
+while i <= n do
+local j = i + 999 if j > n then j = n end
+pi = pi + 1 parts[pi] = _z14_4d6ff2b(_z38_93ae651(t, i, j)) i = j + 1
+end
+return table.concat(parts)
+end
+_z40_c12d58e = 3
+elseif _z40_c12d58e == 16 then
+do
+
+local bxor, lrot, band, bor = bit32.bxor, bit32.lrotate, bit32.band, bit32.bor
+local floor = math.floor
+local function u32(x) return x % 4294967296 end
+local function qr(s, a, b, c, d)
+s[a] = u32(s[a] + s[b]); s[d] = lrot(bxor(s[d], s[a]), 16)
+s[c] = u32(s[c] + s[d]); s[b] = lrot(bxor(s[b], s[c]), 12)
+s[a] = u32(s[a] + s[b]); s[d] = lrot(bxor(s[d], s[a]), 8)
+s[c] = u32(s[c] + s[d]); s[b] = lrot(bxor(s[b], s[c]), 7)
+end
+local function _z20_644626f(b, off)
+return b[off] + b[off + 1] * 256 + b[off + 2] * 65536 + b[off + 3] * 16777216
+end
+local function _z11_52264b7(key, counter, nonce)
+local s = {
+bit32.bxor(0xcf897513, 0xaef90d76), bit32.bxor(0xb28058b3, 0x81a03cdd), bit32.bxor(0xb4c421f9, 0xcda60ccb), bit32.bxor(0x548708e3, 0x3fa76d97),
+_z20_644626f(key, 1), _z20_644626f(key, 5), _z20_644626f(key, 9), _z20_644626f(key, 13),
+_z20_644626f(key, 17), _z20_644626f(key, 21), _z20_644626f(key, 25), _z20_644626f(key, 29),
+counter, _z20_644626f(nonce, 1), _z20_644626f(nonce, 5), _z20_644626f(nonce, 9),
+}
+local w = {}
+for i = 1, 16 do w[i] = s[i] end
+for _ = 1, 10 do
+qr(w,1,5,9,13); qr(w,2,6,10,14); qr(w,3,7,11,15); qr(w,4,8,12,16)
+qr(w,1,6,11,16); qr(w,2,7,12,13); qr(w,3,8,9,14); qr(w,4,5,10,15)
+end
+local out = {}
+for i = 1, 16 do
+local v = u32(w[i] + s[i])
+local b = (i - 1) * 4
+out[b+1] = v % 256; out[b+2] = floor(v/256) % 256
+out[b+3] = floor(v/65536) % 256; out[b+4] = floor(v/16777216) % 256
+end
+return out
+end
+local function _z41_c86b9f7(key, counter0, nonce, data, dlen)
+local out, block = {}, nil
+for i = 0, dlen - 1 do
+local bi = i % 64
+if bi == 0 then block = _z11_52264b7(key, counter0 + floor(i/64), nonce) end
+out[i+1] = bxor(data[i+1], block[bi+1])
+end
+return out
+end
+local function _z49_903e2df(bytes, off, nbytes, append)
+local L = {0,0,0,0,0,0,0,0,0,0}
+local acc, accbits, li = 0, 0, 1
+for i = 0, nbytes - 1 do
+acc = acc + bytes[off+i] * (2 ^ accbits); accbits = accbits + 8
+while accbits >= 13 do L[li] = acc % 8192; acc = floor(acc/8192); accbits = accbits - 13; li = li + 1 end
+end
+if append then
+acc = acc + (2 ^ accbits); accbits = accbits + 1
+while accbits >= 13 and li <= 10 do L[li] = acc % 8192; acc = floor(acc/8192); accbits = accbits - 13; li = li + 1 end
+end
+if li <= 10 then L[li] = L[li] + acc end
+return L
+end
+local function _z29_cbffbc7(a)
+local out = {}
+local acc, accbits, k = 0, 0, 1
+for i = 1, 10 do
+acc = acc + a[i] * (2 ^ accbits); accbits = accbits + 13
+while accbits >= 8 and k <= 16 do out[k] = acc % 256; acc = floor(acc/256); accbits = accbits - 8; k = k + 1 end
+end
+while k <= 16 do out[k] = acc % 256; acc = floor(acc/256); k = k + 1 end
+return out
+end
+local function _z21_54804cb(a, n)
+local r, c = {}, 0
+for k = 1, 10 do local v = a[k] + n[k] + c; r[k] = v % 8192; c = floor(v/8192) end
+while c > 0 do
+local v = r[1] + 5 * c; r[1] = v % 8192; c = floor(v/8192)
+local k = 2
+while c > 0 and k <= 10 do v = r[k] + c; r[k] = v % 8192; c = floor(v/8192); k = k + 1 end
+end
+return r
+end
+local function _z43_d048464(a, b)
+local d = {}
+for k = 1, 19 do d[k] = 0 end
+for i = 1, 10 do
+local ai = a[i]
+if ai ~= 0 then for j = 1, 10 do d[i+j-1] = d[i+j-1] + ai * b[j] end end
+end
+for k = 19, 11, -1 do d[k-10] = d[k-10] + 5 * d[k]; d[k] = 0 end
+local c = 0
+for k = 1, 10 do local v = d[k] + c; d[k] = v % 8192; c = floor(v/8192) end
+while c > 0 do
+local v = d[1] + 5 * c; d[1] = v % 8192; c = floor(v/8192)
+local k = 2
+while c > 0 and k <= 10 do v = d[k] + c; d[k] = v % 8192; c = floor(v/8192); k = k + 1 end
+end
+local r = {}
+for k = 1, 10 do r[k] = d[k] end
+return r
+end
+local _z19_3b7373b = {8187,8191,8191,8191,8191,8191,8191,8191,8191,8191}
+local function _z34_6da19c8(a)
+local diff, borrow = {}, 0
+for k = 1, 10 do
+local v = a[k] - _z19_3b7373b[k] - borrow
+if v < 0 then v = v + 8192; borrow = 1 else borrow = 0 end
+diff[k] = v
+end
+if borrow == 0 then return diff else return a end
+end
+local function _z25_11a0e59(rkey, data, dlen)
+local r = {}
+for i = 1, 16 do r[i] = rkey[i] end
+r[4] = band(r[4],15); r[8] = band(r[8],15); r[12] = band(r[12],15); r[16] = band(r[16],15)
+r[5] = band(r[5],252); r[9] = band(r[9],252); r[13] = band(r[13],252)
+local rl = _z49_903e2df(r, 1, 16, false)
+local s = {}
+for i = 1, 16 do s[i] = rkey[16+i] end
+local a = {0,0,0,0,0,0,0,0,0,0}
+local i = 0
+while i < dlen do
+local blen = math.min(16, dlen - i)
+a = _z21_54804cb(a, _z49_903e2df(data, i+1, blen, true))
+a = _z43_d048464(rl, a)
+i = i + blen
+end
+a = _z34_6da19c8(a)
+local ab = _z29_cbffbc7(a)
+local tag, c = {}, 0
+for k = 1, 16 do local v = ab[k] + s[k] + c; tag[k] = v % 256; c = floor(v/256) end
+return tag
+end
+local function _z27_0ed8097(key, nonce)
+local block = _z11_52264b7(key, 0, nonce)
+local _z4_acd3710 = {}
+for i = 1, 32 do _z4_acd3710[i] = block[i] end
+return _z4_acd3710
+end
+local function _z30_43ad3bb(aad, alen, ct, clen)
+local mac, mi = {}, 0
+for i = 1, alen do mi = mi + 1; mac[mi] = aad[i] end
+local pa = alen % 16
+if pa ~= 0 then for _ = 1, 16 - pa do mi = mi + 1; mac[mi] = 0 end end
+for i = 1, clen do mi = mi + 1; mac[mi] = ct[i] end
+local pc = clen % 16
+if pc ~= 0 then for _ = 1, 16 - pc do mi = mi + 1; mac[mi] = 0 end end
+local function le64(len)
+local x = len
+for _ = 1, 4 do mi = mi + 1; mac[mi] = x % 256; x = floor(x/256) end
+for _ = 1, 4 do mi = mi + 1; mac[mi] = 0 end
+end
+le64(alen); le64(clen)
+return mac, mi
+end
+
+function _z24_fa9bfa6(key, nonce, aad, alen, ct, clen, tag)
+local _z4_acd3710 = _z27_0ed8097(key, nonce)
+local mac, maclen = _z30_43ad3bb(aad, alen, ct, clen)
+local expected = _z25_11a0e59(_z4_acd3710, mac, maclen)
+local diff = 0
+for i = 1, 16 do diff = bor(diff, bxor(expected[i], tag[i])) end
+if diff ~= 0 then return nil end
+return _z41_c86b9f7(key, 1, nonce, ct, clen)
+end
+end
+_z40_c12d58e = 27
+elseif _z40_c12d58e == 17 then
+_z26_0e07a47 = function(S)
+local u8, take, u16, uleb, sleb, count, eof, at = _z6_ae6bcc3(S, 1)
+if u8() ~= 82 or u8() ~= 66 or u8() ~= 88 or u8() ~= 79 then error() end
+if u16() ~= 2 then error() end
+local fo = { u8(), u8(), u8(), u8() }
+local seen = {}
+for i = 1, 4 do local f = fo[i] if f > 3 or seen[f] then error() end seen[f] = true end
+local disp = u8() if disp > 1 then error() end
+local npool = count(MAX_POOL)
+local pool = {}
+for i = 1, npool do local ps = uleb() local plen = count(MAX_BYTES) local poff = take(plen) pool[i] = { start = ps, off = poff, len = plen } end
+local nprotos = count(MAX_PROTOS)
+local off = {}
+local sc = {}
+local acc = 527253
+for gi = 0, nprotos - 1 do
+off[gi] = at()
+sc[gi] = acc
+uleb() u8()
+local nup = count(MAX_UPVALS)
+for i = 1, nup do local kind = u8() if kind > 1 then error() end uleb() end
+local nk = count(MAX_CONSTS)
+for i = 1, nk do
+local tag = u8()
+if tag == 0 then
+elseif tag == 1 then u8()
+elseif tag == 2 then
+local len = count(MAX_BYTES) local off2 = take(len)
+for j = 0, len - 1 do if _z51_f4871c7(S, off2 + j) >= 128 then error() end end
+elseif tag == 3 then local ss = uleb() local rs = _z56_e9481aa(ss, acc) acc = (acc + rs) % 4294967296 local len = count(MAX_BYTES) take(len)
+elseif tag == 4 then uleb() local len = count(MAX_BYTES) take(len)
+elseif tag == 5 then local idx = uleb() if idx >= npool then error() end
+else error() end
+end
+local ncode = count(MAX_CODE)
+for i = 1, ncode do local _z10_03c30a8 = uleb() sleb() sleb() sleb() _z42_8a070ec = _z56_e9481aa(_z56_e9481aa(_z42_8a070ec, bit32.lshift(_z42_8a070ec, 5)), _z10_03c30a8) end
+end
+eof()
+return { S = S, fo = fo, disp = disp, n = nprotos, off = off, pool = pool, sc = sc }
+end
+_z40_c12d58e = 36 + ((_z51_f4871c7(_z45_579f6ee,4)~=79) and 2805 or 0)
+elseif _z40_c12d58e == 29 then
+_z1_8433ee9 = function(S, off, len, start)
+local st = start
+local out = table.create and table.create(len) or {}
+for i = 1, len do
+st = (st * _z56_e9481aa(3202099712, _z56_e9481aa(_z42_8a070ec, _z47_d418470)) + _z56_e9481aa(2676466678, _z56_e9481aa(_z42_8a070ec, _z47_d418470))) % 4294967296
+local k = math.floor(st / 16777216) % 256
+out[i] = _z14_4d6ff2b(_z56_e9481aa(_z51_f4871c7(S, off + i - 1), k))
+end
+return table.concat(out)
+end
+_z40_c12d58e = 33
+elseif _z40_c12d58e == 14 then
+_z47_d418470 = bit32.bxor(bit32.bxor(_z47_d418470, bit32.lshift(_z47_d418470, 5)), math.floor(Vector3.new(1,4,8).Magnitude + 0.5))
+_z40_c12d58e = 30
+elseif _z40_c12d58e == 28 then
+_z2_46dbd68 = function(pi, U, ...)
+local pr = _z46_dbc0ba6(pi)
+local K, C = pr.K, pr.C
+local B0 = {}
+local top = 0
+local np = pr.np
+for i = 0, np - 1 do B0[i] = select(i + 1, ...) end
+local VA, VAn = {}, 0
+if pr.va then
+VAn = select('#', ...) - np
+if VAn < 0 then VAn = 0 end
+for i = 1, VAn do VA[i] = select(np + i, ...) end
+end
+local pc = 0
+while true do
+local ins = C[pc]
+local op, a, b, c = ins[4], ins[1], ins[2], ins[3]
+if op < 18 then
+if op < 9 then
+if op < 4 then
+if op < 2 then
+if op < 1 then
+if op == 0 then
+B0[a] = _z35_1e9fbaf[K[b]]
+end
+else
+if op == 1 then
+B0[a] = K[b]
+end
+end
+else
+if op < 3 then
+if op == 2 then
+local pa = a + (0)
+if b < 0 then
+for i = 1, VAn do B0[pa + i - 1] = VA[i] end
+top = a + VAn
+else
+for i = 0, b - 1 do B0[pa + i] = VA[i + 1] end
+end
+end
+else
+if op == 3 then
+local pa = a + (0)
+local f = B0[pa]
+local nargs = b
+if nargs < 0 then nargs = top - a - 1 end
+local args = {}
+for i = 1, nargs do args[i] = B0[pa + i] end
+local res = _z33_e5ae31c(f(_z38_93ae651(args, 1, nargs)))
+if c < 0 then
+for i = 1, res.n do B0[pa + i - 1] = res[i] end
+top = a + res.n
+else
+for i = 0, c - 1 do B0[pa + i] = res[i + 1] end
+end
+end
+end
+end
+else
+if op < 6 then
+if op < 5 then
+if op == 4 then
+B0[a] = B0[b][B0[c]]
+end
+else
+if op == 5 then
+B0[a] = B0[b]
+end
+end
+else
+if op < 7 then
+if op == 6 then
+B0[a] = B0[b] * B0[c]
+end
+else
+if op < 8 then
+if op == 7 then
+local __h1 = _z35_1e9fbaf[K[b]] B0[a] = __h1
+end
+else
+if op == 8 then
+local __h1 = K[b] B0[a] = __h1
+end
+end
+end
+end
+end
+else
+if op < 13 then
+if op < 11 then
+if op < 10 then
+if op == 9 then
+local __h1 = B0[b][B0[c]] B0[a] = __h1
+end
+else
+if op == 10 then
+B0[a] = B0[b] + B0[c]
+end
+end
+else
+if op < 12 then
+if op == 11 then
+B0[a] = (B0[b] ~= B0[c])
+end
+else
+if op == 12 then
+if not B0[a] then pc = b continue end
+end
+end
+end
+else
+if op < 15 then
+if op < 14 then
+if op == 13 then
+local l0 = B0[c]
+B0[b] = l0 * K[a]
+end
+else
+if op == 14 then
+pc = a
+continue
+end
+end
+else
+if op < 16 then
+if op == 15 then
+local __h2 = _z35_1e9fbaf[K[b]] B0[a] = __h2
+end
+else
+if op < 17 then
+if op == 16 then
+local __h2 = K[b] B0[a] = __h2
+end
+else
+if op == 17 then
+local __h2 = B0[b][B0[c]] B0[a] = __h2
+end
+end
+end
+end
+end
+end
+else
+if op < 27 then
+if op < 22 then
+if op < 20 then
+if op < 19 then
+if op == 18 then
+B0[b] = B0[c] * K[a]
+end
+else
+if op == 19 then
+local arg = B0[b]
+B0[a] = arg
+B0[c] = B0[b]
+end
+end
+else
+if op < 21 then
+if op == 20 then
+B0[a] = B0[b] % B0[c]
+end
+else
+if op == 21 then
+B0[a] = (B0[b] == B0[c])
+end
+end
+end
+else
+if op < 24 then
+if op < 23 then
+if op == 22 then
+local st = B0[c] * K[a]
+B0[b] = st
+end
+else
+if op == 23 then
+local __h1 = B0[b] B0[a] = __h1
+end
+end
+else
+if op < 25 then
+if op == 24 then
+local __h2 = B0[b] B0[a] = __h2
+end
+else
+if op < 26 then
+if op == 25 then
+local arg = B0[c] % K[a]
+B0[b] = arg
+end
+else
+if op == 26 then
+local w = B0[c]
+local d1 = (w == K[a])
+B0[b] = d1
+end
+end
+end
+end
+end
+else
+if op < 32 then
+if op < 29 then
+if op < 28 then
+if op == 27 then
+local m = K[b]
+B0[a] = m
+B0[c] = {}
+end
+else
+if op == 28 then
+B0[a][B0[b]] = B0[c]
+end
+end
+else
+if op < 30 then
+if op == 29 then
+local __h1 = B0[c] B0[a][B0[b]] = __h1
+end
+else
+if op < 31 then
+if op == 30 then
+local __h2 = B0[c] B0[a][B0[b]] = __h2
+end
+else
+if op == 31 then
+B0[a] = K[b]
+local g0 = K[b]
+B0[c] = g0
+end
+end
+end
+end
+else
+if op < 34 then
+if op < 33 then
+if op == 32 then
+local h0 = {}
+B0[a] = h0
+local g0 = K[c]
+B0[b] = g0
+end
+else
+if op == 33 then
+B0[b] = #B0[a]
+end
+end
+else
+if op < 35 then
+if op == 34 then
+local pa = a + (0)
+B0[pa] = B0[pa] - B0[pa+2]
+pc = b
+continue
+end
+else
+if op < 36 then
+if op == 35 then
+local pa = a + (0)
+local step = B0[pa+2]
+if step == 0 then error("'for' step is zero") end
+B0[pa] = B0[pa] + step
+local v, limit = B0[pa], B0[pa+1]
+if (step > 0 and v <= limit) or (step < 0 and v >= limit) then
+B0[pa+3] = v pc = b continue end
+end
+else
+if op == 36 then
+local pa = a + (0)
+local n = b
+if n < 0 then n = top - a end
+local rets = {}
+for i = 0, n - 1 do rets[i + 1] = B0[pa + i] end
+return _z38_93ae651(rets, 1, n)
+end
+end
+end
+end
+end
+end
+end
+pc = pc + 1
+end
+end
+_z40_c12d58e = 9 + ((_z47_d418470~=2397458568) and 2566 or 0)
+elseif _z40_c12d58e == 2 then
+do local ok, env = pcall(function() return getfenv(0) end) if ok and type(env) == 'table' then _z35_1e9fbaf = env end end
+_z40_c12d58e = 5
+elseif _z40_c12d58e == 8 then
+_z14_4d6ff2b = string.char
+_z40_c12d58e = 40
+elseif _z40_c12d58e == 10 then
+_z45_579f6ee = _z17_760ac82()
+_z40_c12d58e = 17 + ((_z51_f4871c7(_z45_579f6ee,2)~=66) and 459 or 0)
+elseif _z40_c12d58e == 39 then
+_z9_baa99f5 = _z39_a2d3b05.pool
+_z40_c12d58e = 38 + ((_z42_8a070ec~=808612125) and 14 or 0)
+elseif _z40_c12d58e == 22 then
+_z47_d418470 = bit32.bxor(bit32.bxor(_z47_d418470, bit32.lshift(_z47_d418470, 5)), math.floor(Vector3.new(2,3,6).Magnitude + 0.5))
+_z40_c12d58e = 32
+elseif _z40_c12d58e == 3 then
+_z17_760ac82 = function()
+local E = _z13_d3bef96
+local n = #E
+if n < 49 then error() end
+if _z51_f4871c7(E,1) ~= 82 or _z51_f4871c7(E,2) ~= 66 or _z51_f4871c7(E,3) ~= 88 or _z51_f4871c7(E,4) ~= 69 then error() end
+if _z51_f4871c7(E,5) ~= 1 or _z51_f4871c7(E,6) ~= 0 then error() end
+if _z51_f4871c7(E,7) ~= 1 then error() end
+local ct_len = _z51_f4871c7(E,30) + _z51_f4871c7(E,31)*256 + _z51_f4871c7(E,32)*65536 + _z51_f4871c7(E,33)*16777216
+if 49 + ct_len ~= n then error() end
+local aad = {}
+for i = 1, 17 do aad[i] = _z51_f4871c7(E, i) end
+aad[18] = _z51_f4871c7(E,30) aad[19] = _z51_f4871c7(E,31) aad[20] = _z51_f4871c7(E,32) aad[21] = _z51_f4871c7(E,33)
+local nonce = {}
+for i = 1, 12 do nonce[i] = _z51_f4871c7(E, 17 + i) end
+local ct = {}
+for i = 1, ct_len do ct[i] = _z51_f4871c7(E, 33 + i) end
+local tag = {}
+for i = 1, 16 do tag[i] = _z51_f4871c7(E, 33 + ct_len + i) end
+local pt = _z24_fa9bfa6(_z28_d21aa77, nonce, aad, 21, ct, ct_len, tag)
+if pt == nil then error() end
+return _z48_8863b02(pt, ct_len)
+end
+_z40_c12d58e = 34
+elseif _z40_c12d58e == 23 then
+_z47_d418470 = bit32.bxor(bit32.bxor(_z47_d418470, bit32.lshift(_z47_d418470, 5)), math.floor(Vector3.new(4,13,16):Dot(Vector3.new(1,1,1)) + 0.5))
+_z40_c12d58e = 21
+elseif _z40_c12d58e == 25 then
+_z33_e5ae31c = table.pack or function(...) return { n = select('#', ...), ... } end
+_z40_c12d58e = 26
+elseif _z40_c12d58e == 20 then
+_z31_0573f6e = string.sub
+_z40_c12d58e = 29
+elseif _z40_c12d58e == 13 then
+_z38_93ae651 = table.unpack or unpack
+_z40_c12d58e = 25
+elseif _z40_c12d58e == 19 then
+_z46_dbc0ba6 = function(gi)
+local m = _z0_ece59ca[gi]
+if m then return m end
+local u8, take, u16, uleb, sleb, count, eof, at = _z6_ae6bcc3(_z3_212af63, _z44_2796e9d[gi])
+local np = uleb()
+local va = u8() ~= 0
+local nup = count(MAX_UPVALS)
+local UP = {}
+for i = 1, nup do local kind = u8() UP[i] = { kind, uleb() } end
+local nk = count(MAX_CONSTS)
+local K = {}
+local acc = __SC[gi]
+for i = 0, nk - 1 do
+local tag = u8()
+if tag == 1 then K[i] = u8() ~= 0
+elseif tag == 2 then local len = count(MAX_BYTES) local off = take(len) K[i] = _z57_d1058c4(_z31_0573f6e(_z3_212af63, off, off + len - 1))
+elseif tag == 3 then local ss = uleb() local rs = _z56_e9481aa(ss, acc) acc = (acc + rs) % 4294967296 local len = count(MAX_BYTES) local off = take(len) K[i] = _z1_8433ee9(_z3_212af63, off, len, rs)
+elseif tag == 4 then local start = uleb() local len = count(MAX_BYTES) local off = take(len) K[i] = _z57_d1058c4(_z1_8433ee9(_z3_212af63, off, len, start))
+elseif tag == 5 then local idx = uleb() local pe = _z9_baa99f5[idx + 1] K[i] = _z1_8433ee9(_z3_212af63, pe.off, pe.len, pe.start) end
+end
+local ncode = count(MAX_CODE)
+local C = {}
+local fo = _z15_cc2cfc8
+for i = 0, ncode - 1 do
+local op = uleb() local a = sleb() local b = sleb() local c = sleb()
+local vals = { op, a, b, c }
+C[i] = { vals[fo[1] + 1], vals[fo[2] + 1], vals[fo[3] + 1], vals[fo[4] + 1] }
+end
+m = { np = np, va = va, K = K, C = C, UP = UP }
+_z0_ece59ca[gi] = m
+return m
+end
+_z40_c12d58e = 28 + ((_z51_f4871c7(_z45_579f6ee,1)~=82) and 3890 or 0)
+elseif _z40_c12d58e == 15 then
+_z6_ae6bcc3 = function(S, start)
+local n = #S
+local pos = start
+local function u8()
+if pos > n then error() end
+local v = _z51_f4871c7(S, pos) pos = pos + 1 return v
+end
+local function take(k)
+if pos + k - 1 > n then error() end
+local off = pos pos = pos + k return off
+end
+local function u16() local lo = u8() local hi = u8() return lo + hi * 256 end
+local function uleb()
+local result, shift, cnt = 0, 1, 0
+while true do
+local b = u8() cnt = cnt + 1
+if cnt > 5 then error() end
+result = result + (b % 128) * shift
+if b < 128 then
+if result > 4294967295 then error() end
+return result
+end
+shift = shift * 128
+end
+end
+local function sleb()
+local result, shift, cnt = 0, 1, 0
+while true do
+local b = u8() cnt = cnt + 1
+if cnt > 5 then error() end
+result = result + (b % 128) * shift
+shift = shift * 128
+if b < 128 then
+if b % 128 >= 64 then result = result - shift end
+if result < -2147483648 or result > 2147483647 then error() end
+return result
+end
+end
+end
+local function count(max)
+local c = uleb()
+if c > max then error() end
+if c > n - pos + 1 then error() end
+return c
+end
+local function eof() if pos ~= n + 1 then error() end end
+local function at() return pos end
+return u8, take, u16, uleb, sleb, count, eof, at
+end
+_z40_c12d58e = 10
+elseif _z40_c12d58e == 40 then
+_z51_f4871c7 = string.byte
+_z40_c12d58e = 20
+elseif _z40_c12d58e == 35 then
+MAX_POOL = 1048576
+_z40_c12d58e = 15
+elseif _z40_c12d58e == 36 then
+_z39_a2d3b05 = _z26_0e07a47(_z45_579f6ee)
+_z40_c12d58e = 24 + ((_z42_8a070ec~=808612125) and 1169 or 0)
+elseif _z40_c12d58e == 32 then
+_z47_d418470 = bit32.bxor(bit32.bxor(_z47_d418470, bit32.lshift(_z47_d418470, 5)), math.floor(Vector2.new(5,12).Magnitude + 0.5))
+_z40_c12d58e = 14
+elseif _z40_c12d58e == 4 then
+MAX_CONSTS = 1048576
+_z40_c12d58e = 1
+elseif _z40_c12d58e == 12 then
+_z47_d418470 = bit32.bxor(bit32.bxor(_z47_d418470, bit32.lshift(_z47_d418470, 5)), math.floor(Vector3.new(1,2,2):Cross(Vector3.new(2,-2,1)):Dot(Vector3.new(1,1,1)) + 0.5))
+_z40_c12d58e = 22
+elseif _z40_c12d58e == 6 then
+MAX_BYTES = 67108864
+_z40_c12d58e = 35
+elseif _z40_c12d58e == 9 then
+return _z2_46dbd68(0, {}, ...)
+elseif _z40_c12d58e == 24 then
+_z3_212af63, _z44_2796e9d, _z15_cc2cfc8, _z0_ece59ca = _z39_a2d3b05.S, _z39_a2d3b05.off, _z39_a2d3b05.fo, {}
+_z40_c12d58e = 39 + ((_z51_f4871c7(_z45_579f6ee,2)~=66) and 3443 or 0)
+elseif _z40_c12d58e == 31 then
+_z42_8a070ec = _z54_066688b
+_z40_c12d58e = 7
+elseif _z40_c12d58e == 1 then
+MAX_CODE = 4194304
+_z40_c12d58e = 6
+elseif _z40_c12d58e == 33 then
+_z57_d1058c4 = function(t)
+t = string.gsub(t, '_', '')
+local p = string.lower(string.sub(t, 1, 2))
+if p == '0b' then return tonumber(string.sub(t, 3), 2) end
+return tonumber(t)
+end
+_z40_c12d58e = 16
+elseif _z40_c12d58e == 26 then
+_z35_1e9fbaf = _G
+_z40_c12d58e = 2
+elseif _z40_c12d58e == 30 then
+_z47_d418470 = bit32.bxor(bit32.bxor(_z47_d418470, bit32.lshift(_z47_d418470, 5)), math.floor((CFrame.new(3,5,7) * CFrame.new(2,4,6)).X + 0.5))
+_z40_c12d58e = 11
+elseif _z40_c12d58e == 38 then
+__SC = _z39_a2d3b05.sc
+_z40_c12d58e = 19 + ((_z47_d418470~=2397458568) and 1561 or 0)
+elseif _z40_c12d58e == 7 then
+_z47_d418470 = 1311716593
+_z40_c12d58e = 12
+elseif _z40_c12d58e == 11 then
+_z47_d418470 = bit32.bxor(bit32.bxor(_z47_d418470, bit32.lshift(_z47_d418470, 5)), math.floor(Vector2.new(20,21).Magnitude + 0.5))
+_z40_c12d58e = 23
+elseif _z40_c12d58e == 34 then
+MAX_PROTOS = 1048576
+_z40_c12d58e = 37
+elseif _z40_c12d58e == 37 then
+MAX_UPVALS = 65536
+_z40_c12d58e = 4
+elseif _z40_c12d58e == 18 then
+for __i = 1, 11 do
+_z54_066688b = bit32.bxor(_z54_066688b, bit32.lshift(_z54_066688b, 13))
+_z54_066688b = bit32.bxor(_z54_066688b, bit32.rshift(_z54_066688b, 17))
+_z54_066688b = bit32.bxor(_z54_066688b, bit32.lshift(_z54_066688b, 5))
+end
+_z40_c12d58e = 31
+elseif _z40_c12d58e == 5 then
+_z54_066688b = 213101721
+_z40_c12d58e = 18
+end
+end
