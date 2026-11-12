@@ -1,0 +1,117 @@
+-- ============ 💬 Player-to-Player Chat ============
+
+local HttpService = game:GetService("HttpService")
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local API_KEY = "ks_48c74b0e3da547d88d5e8ae31525d585fc5ef7c41ca5bedc"
+local PROJECT_ID = "3c3a74de358542e7"
+
+local Key = getgenv().Key or "USER_KEY"
+
+local CHAT_URL = "https://secure-key-system.lovable.app/api/public/v1/chat"
+
+local httpRequest = (syn and syn.request)
+    or (http and http.request)
+    or http_request
+    or request
+
+local lastChatId = nil
+
+local function decode(res)
+    if not res then return nil end
+
+    local ok, data = pcall(function()
+        return HttpService:JSONDecode(res.Body)
+    end)
+
+    if not ok then return nil end
+    return data
+end
+
+-- Send Message
+local function sendMessage(toUserId, message)
+    local ok, res = pcall(httpRequest, {
+        Url = CHAT_URL .. "/send",
+        Method = "POST",
+        Headers = {
+            ["Content-Type"] = "application/json",
+            ["Authorization"] = "Bearer " .. API_KEY
+        },
+        Body = HttpService:JSONEncode({
+            project_id = PROJECT_ID,
+            key = Key,
+            from_user_id = LocalPlayer.UserId,
+            from_username = LocalPlayer.Name,
+            to_user_id = toUserId,
+            message = message
+        })
+    })
+
+    if not ok or not res then
+        warn("[Chat] Send failed")
+        return false
+    end
+
+    local data = decode(res)
+
+    if not data then
+        warn("[Chat] Invalid response")
+        return false
+    end
+
+    return true
+end
+
+-- Receive Messages
+local function getNewMessages()
+    local url = CHAT_URL
+        .. "/messages?project_id=" .. PROJECT_ID
+        .. "&user_id=" .. LocalPlayer.UserId
+        .. "&key=" .. HttpService:UrlEncode(Key)
+
+    if lastChatId then
+        url = url .. "&last_message_id=" .. lastChatId
+    end
+
+    local ok, res = pcall(httpRequest, {
+        Url = url,
+        Method = "GET",
+        Headers = {
+            ["Authorization"] = "Bearer " .. API_KEY
+        }
+    })
+
+    if not ok or not res then return end
+
+    local data = decode(res)
+    if not data then return end
+
+    local first = lastChatId == nil
+
+    for _, m in ipairs(data.messages or {}) do
+        if not first and m.from_user_id ~= LocalPlayer.UserId then
+            local tag = m.to_user_id and "[DM]" or "[Chat]"
+
+            print(tag .. " " .. m.from_username .. ": " .. m.message)
+        end
+    end
+
+    lastChatId = data.last_message_id
+end
+
+-- Examples:
+-- Global Chat:
+-- sendMessage(nil, "Hello everyone!")
+
+-- Private Chat:
+-- sendMessage(123456789, "Hello!")
+
+-- Start Chat
+getNewMessages()
+
+task.spawn(function()
+    while task.wait(2) do
+        getNewMessages()
+    end
+end)
