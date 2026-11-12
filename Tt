@@ -1,117 +1,309 @@
--- ============ 💬 Player-to-Player Chat ============
-
+-- KeyForge key check
 local HttpService = game:GetService("HttpService")
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 
-local API_KEY = "ks_48c74b0e3da547d88d5e8ae31525d585fc5ef7c41ca5bedc"
+local API_URL    = "https://secure-key-system.lovable.app/api/public/v1/verify"
 local PROJECT_ID = "3c3a74de358542e7"
+local API_KEY    = "ks_48c74b0e3da547d88d5e8ae31525d585fc5ef7c41ca5bedc"
+local GET_KEY_URL = "https://secure-key-system.lovable.app/get/3c3a74de358542e7"
 
-local Key = getgenv().Key or "USER_KEY"
+local Key = getgenv().Key or "USER_KEY" -- the key the user got from GET_KEY_URL
 
-local CHAT_URL = "https://secure-key-system.lovable.app/api/public/v1/chat"
+local httpRequest = (syn and syn.request) or (http and http.request) or http_request or request
+local HWID = (gethwid and gethwid()) or game:GetService("RbxAnalyticsService"):GetClientId()
 
-local httpRequest = (syn and syn.request)
-    or (http and http.request)
-    or http_request
-    or request
+-- Detect executor (Synapse, Wave, Solara, Delta, Fluxus, ...)
+local EXECUTOR = "unknown"
+pcall(function()
+    if identifyexecutor then EXECUTOR = tostring((identifyexecutor()))
+    elseif getexecutorname then EXECUTOR = tostring(getexecutorname())
+    elseif syn then EXECUTOR = "Synapse X"
+    elseif fluxus then EXECUTOR = "Fluxus" end
+end)
 
-local lastChatId = nil
-
-local function decode(res)
-    if not res then return nil end
-
-    local ok, data = pcall(function()
-        return HttpService:JSONDecode(res.Body)
-    end)
-
-    if not ok then return nil end
-    return data
-end
-
--- Send Message
-local function sendMessage(toUserId, message)
-    local ok, res = pcall(httpRequest, {
-        Url = CHAT_URL .. "/send",
+local function verifyKey(key)
+    local ok, response = pcall(httpRequest, {
+        Url = API_URL,
         Method = "POST",
         Headers = {
             ["Content-Type"] = "application/json",
-            ["Authorization"] = "Bearer " .. API_KEY
+            ["Authorization"] = "Bearer " .. API_KEY,
         },
         Body = HttpService:JSONEncode({
             project_id = PROJECT_ID,
-            key = Key,
-            from_user_id = LocalPlayer.UserId,
-            from_username = LocalPlayer.Name,
-            to_user_id = toUserId,
-            message = message
-        })
+            key = key,
+            hwid = HWID,
+            roblox_user_id = LocalPlayer.UserId,
+            roblox_username = LocalPlayer.Name,
+            executor = EXECUTOR,
+            roblox_avatar = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. LocalPlayer.UserId .. "&width=150&height=150&format=png",
+        }),
     })
-
-    if not ok or not res then
-        warn("[Chat] Send failed")
-        return false
+    if not ok or not response then
+        return false, "Could not reach key server"
     end
-
-    local data = decode(res)
-
-    if not data then
-        warn("[Chat] Invalid response")
-        return false
+    local decoded = pcall(function() response = HttpService:JSONDecode(response.Body) end)
+    if not decoded then
+        return false, "Invalid server response"
     end
+    return response.valid == true, response.message, response
+end
 
+local valid, message, info = verifyKey(Key)
+-- Kill-switch / maintenance / blocked executor
+if info and info.status == "killed" then
+    LocalPlayer:Kick("⛔ " .. tostring(info.message))
+    return
+elseif info and info.status == "maintenance" then
+    local m = tostring(info.message)
+    if info.maintenance_until then m = m .. "
+Back at: " .. tostring(info.maintenance_until) .. " (UTC)" end
+    LocalPlayer:Kick("🛠 Maintenance: " .. m)
+    return
+elseif info and info.status == "executor_blocked" then
+    LocalPlayer:Kick("🚫 " .. tostring(info.message))
+    return
+end
+
+-- 🎁 Promo codes: getgenv().Promo = "CODE" to get a free key (or extend Key)
+if not valid and getgenv().Promo then
+    local okP, r = pcall(httpRequest, {
+        Url = "https://secure-key-system.lovable.app/api/public/v1/redeem", Method = "POST",
+        Headers = { ["Content-Type"] = "application/json", ["Authorization"] = "Bearer " .. API_KEY },
+        Body = HttpService:JSONEncode({ project_id = PROJECT_ID, code = getgenv().Promo, key = Key }),
+    })
+    if okP and r then
+        local okD, d = pcall(function() return HttpService:JSONDecode(r.Body) end)
+        if okD and d.success then
+            Key = d.key
+            if setclipboard then setclipboard(d.key) end
+            valid, message, info = verifyKey(Key)
+        end
+    end
+end
+
+if not valid then
+    if setclipboard then setclipboard(GET_KEY_URL) end
+    Players.LocalPlayer:Kick("Key rejected: " .. tostring(message) .. "\nGet a key: " .. GET_KEY_URL)
+    return
+end
+
+print("[KeyForge] " .. message)
+-- ✅ Protected script code goes below
+
+-- 💬 Support messages: send a message and receive replies (owner or AI)
+local MSG_URL = "https://secure-key-system.lovable.app/api/public/v1/messages"
+local lastSeen = nil
+local primed = false
+
+-- On-screen notification popup
+local function notify(title, text)
+    local gui = LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("SupportNotify")
+    if not gui then
+        gui = Instance.new("ScreenGui")
+        gui.Name = "SupportNotify"
+        gui.ResetOnSpawn = false
+        gui.Parent = LocalPlayer.PlayerGui
+        local list = Instance.new("Frame")
+        list.Name = "List"
+        list.BackgroundTransparency = 1
+        list.Size = UDim2.new(0, 320, 1, -20)
+        list.Position = UDim2.new(1, -330, 0, 10)
+        list.Parent = gui
+        local layout = Instance.new("UIListLayout")
+        layout.Padding = UDim.new(0, 6)
+        layout.VerticalAlignment = Enum.VerticalAlignment.Bottom
+        layout.Parent = list
+    end
+    local card = Instance.new("TextButton")
+    card.AutoButtonColor = false
+    card.Size = UDim2.new(1, 0, 0, 0)
+    card.AutomaticSize = Enum.AutomaticSize.Y
+    card.BackgroundColor3 = Color3.fromRGB(20, 24, 28)
+    card.TextColor3 = Color3.fromRGB(235, 240, 240)
+    card.TextWrapped = true
+    card.TextXAlignment = Enum.TextXAlignment.Left
+    card.Font = Enum.Font.Gotham
+    card.TextSize = 14
+    card.RichText = true
+    card.Text = "<b>" .. title .. "</b>\n" .. text:gsub("<", "&lt;")
+    Instance.new("UICorner", card).CornerRadius = UDim.new(0, 8)
+    local pad = Instance.new("UIPadding", card)
+    pad.PaddingTop, pad.PaddingBottom = UDim.new(0, 10), UDim.new(0, 10)
+    pad.PaddingLeft, pad.PaddingRight = UDim.new(0, 12), UDim.new(0, 12)
+    local stroke = Instance.new("UIStroke", card)
+    stroke.Color = Color3.fromRGB(0, 220, 150)
+    card.Parent = gui.List
+    card.MouseButton1Click:Connect(function() card:Destroy() end)
+    task.delay(15, function() if card then card:Destroy() end end)
+end
+
+local function decode(res)
+    if not res then return nil, "no response" end
+    local okJ, data = pcall(function() return HttpService:JSONDecode(res.Body) end)
+    if not okJ then return nil, "bad JSON (HTTP " .. tostring(res.StatusCode) .. "): " .. tostring(res.Body) end
+    if res.StatusCode and res.StatusCode >= 400 then
+        return nil, "HTTP " .. res.StatusCode .. ": " .. tostring(data.message)
+    end
+    return data
+end
+
+local function label(sender)
+    if sender == "owner" then return "Owner" elseif sender == "ai" then return "AI Support" end
+    return nil
+end
+
+local function sendSupport(text)
+    local ok, res = pcall(httpRequest, {
+        Url = MSG_URL, Method = "POST",
+        Headers = { ["Content-Type"] = "application/json", ["Authorization"] = "Bearer " .. API_KEY },
+        Body = HttpService:JSONEncode({
+            project_id = PROJECT_ID,
+            player_user_id = LocalPlayer.UserId,
+            player_name = LocalPlayer.Name,
+            message = text,
+        }),
+    })
+    if not ok then warn("[Support] request failed: " .. tostring(res)) return end
+    local data, err = decode(res)
+    if not data then warn("[Support] " .. err) notify("Support", err) return end
+    -- replies (welcome/AI) will also arrive through pollReplies
+end
+
+local function pollReplies()
+    local url = MSG_URL .. "?project_id=" .. PROJECT_ID .. "&player_user_id=" .. LocalPlayer.UserId
+    if lastSeen then url = url .. "&since=" .. HttpService:UrlEncode(lastSeen) end
+    local ok, res = pcall(httpRequest, { Url = url, Method = "GET", Headers = { ["Authorization"] = "Bearer " .. API_KEY } })
+    if not ok then warn("[Support] poll failed: " .. tostring(res)) return end
+    local data, err = decode(res)
+    if not data then warn("[Support] " .. err) return end
+    for _, m in ipairs(data.messages or {}) do
+        lastSeen = m.created_at
+        local who = label(m.sender)
+        if who and primed then
+            print("[" .. who .. "] " .. m.message)
+            notify(who, m.message)
+        end
+    end
+    primed = true -- first poll only loads history (no popups)
+end
+
+-- Example: sendSupport("Hi, my key is not working")
+pollReplies()
+task.spawn(function() while task.wait(5) do pollReplies() end end)
+
+-- ============ 💬 Player-to-Player Chat ============
+local CHAT_URL = (MSG_URL:gsub("/messages$", "")) .. "/chat"
+local lastChatId = nil
+
+-- toUserId = nil sends to the global room; a UserId sends a private message
+local function sendMessage(toUserId, message)
+    local ok, res = pcall(httpRequest, {
+        Url = CHAT_URL .. "/send", Method = "POST",
+        Headers = { ["Content-Type"] = "application/json", ["Authorization"] = "Bearer " .. API_KEY },
+        Body = HttpService:JSONEncode({
+            project_id = PROJECT_ID, key = Key,
+            from_user_id = LocalPlayer.UserId, from_username = LocalPlayer.Name,
+            to_user_id = toUserId, message = message,
+        }),
+    })
+    if not ok then warn("[Chat] send failed: " .. tostring(res)) return false end
+    local data, err = decode(res)
+    if not data then notify("Chat", err) return false end
     return true
 end
 
--- Receive Messages
 local function getNewMessages()
-    local url = CHAT_URL
-        .. "/messages?project_id=" .. PROJECT_ID
-        .. "&user_id=" .. LocalPlayer.UserId
+    local url = CHAT_URL .. "/messages?project_id=" .. PROJECT_ID .. "&user_id=" .. LocalPlayer.UserId
         .. "&key=" .. HttpService:UrlEncode(Key)
-
-    if lastChatId then
-        url = url .. "&last_message_id=" .. lastChatId
-    end
-
-    local ok, res = pcall(httpRequest, {
-        Url = url,
-        Method = "GET",
-        Headers = {
-            ["Authorization"] = "Bearer " .. API_KEY
-        }
-    })
-
-    if not ok or not res then return end
-
+    if lastChatId then url = url .. "&last_message_id=" .. lastChatId end
+    local ok, res = pcall(httpRequest, { Url = url, Method = "GET", Headers = { ["Authorization"] = "Bearer " .. API_KEY } })
+    if not ok then return end
     local data = decode(res)
     if not data then return end
-
     local first = lastChatId == nil
-
     for _, m in ipairs(data.messages or {}) do
         if not first and m.from_user_id ~= LocalPlayer.UserId then
-            local tag = m.to_user_id and "[DM]" or "[Chat]"
-
-            print(tag .. " " .. m.from_username .. ": " .. m.message)
+            local tag = m.to_user_id and "[DM] " or "[Chat] "
+            print(tag .. m.from_username .. ": " .. m.message)
+            notify(tag .. m.from_username, m.message)
         end
     end
-
     lastChatId = data.last_message_id
 end
 
--- Examples:
--- Global Chat:
--- sendMessage(nil, "Hello everyone!")
-
--- Private Chat:
--- sendMessage(123456789, "Hello!")
-
--- Start Chat
+-- Example:
+--   Player A: sendMessage(nil, "hello everyone")         -- global room
+--   Player A: sendMessage(123456789, "hey, you there?")  -- private to player B
+--   Player B receives it via getNewMessages() and replies:
+--             sendMessage(<Player A UserId>, "yes!")     -- arrives back at A
 getNewMessages()
+task.spawn(function() while task.wait(2) do getNewMessages() end end)
 
+-- ===== MM2 Trade Value Scanner =====
+-- Fill these with the weapon names on each side of the trade window.
+getgenv().MM2Give = getgenv().MM2Give or {}
+getgenv().MM2Get  = getgenv().MM2Get  or {}
+local function scanTrade(give, get)
+    local ok, r = pcall(httpRequest, {
+        Url = "https://secure-key-system.lovable.app/api/public/v1/mm2/trade-calc", Method = "POST",
+        Headers = { ["Content-Type"] = "application/json", ["Authorization"] = "Bearer " .. API_KEY },
+        Body = HttpService:JSONEncode({ project_id = PROJECT_ID, your_items = give, their_items = get }),
+    })
+    if not ok or not r then return notify("MM2", "Trade check failed") end
+    local okD, d = pcall(function() return HttpService:JSONDecode(r.Body) end)
+    if not okD or not d.success then return notify("MM2", (d and d.message) or "Bad response") end
+    local gui = LocalPlayer.PlayerGui:FindFirstChild("MM2Scanner") or Instance.new("ScreenGui", LocalPlayer.PlayerGui)
+    gui.Name = "MM2Scanner"
+    local lbl = gui:FindFirstChild("Info") or Instance.new("TextLabel", gui)
+    lbl.Name = "Info"; lbl.Size = UDim2.new(0, 260, 0, 60); lbl.Position = UDim2.new(1, -270, 0, 10)
+    lbl.BackgroundTransparency = 0.3; lbl.TextScaled = true
+    lbl.Text = ("Give %d | Get %d\n%s (%+.1f%%)"):format(d.your_value, d.their_value, d.verdict, d.percent)
+    lbl.TextColor3 = (d.verdict == "Lose") and Color3.fromRGB(255, 80, 80) or Color3.fromRGB(80, 255, 120)
+end
+if #getgenv().MM2Give + #getgenv().MM2Get > 0 then scanTrade(getgenv().MM2Give, getgenv().MM2Get) end
+
+-- ===== Blox Fruits Event Finder + Auto-Hop =====
+local BF_URL = "https://secure-key-system.lovable.app/api/public/v1/bloxfruits/events"
+local function bfReq(method, url, body)
+    local ok, r = pcall(httpRequest, { Url = url, Method = method, Body = body and HttpService:JSONEncode(body) or nil,
+        Headers = { ["Content-Type"] = "application/json", ["Authorization"] = "Bearer " .. API_KEY } })
+    if not ok or not r then return nil end
+    local okD, d = pcall(function() return HttpService:JSONDecode(r.Body) end)
+    return okD and d or nil
+end
+local function detectEvents()
+    local found = {}
+    local map = workspace:FindFirstChild("Map")
+    if map and map:FindFirstChild("MysticIsland") then table.insert(found, "mirage") end
+    if map and map:FindFirstChild("KitsuneIsland") then table.insert(found, "kitsune") end
+    local ok, moon = pcall(function() return game:GetService("Lighting").Sky.MoonTextureId end)
+    if ok and moon == "http://www.roblox.com/asset/?id=9709149431" then table.insert(found, "full_moon") end
+    return found
+end
+local function reportEvents()
+    for _, ev in ipairs(detectEvents()) do
+        bfReq("POST", BF_URL, { project_id = PROJECT_ID, event = ev, place_id = game.PlaceId, job_id = game.JobId,
+            players = #Players:GetPlayers(), reporter_id = LocalPlayer.UserId, reporter_name = LocalPlayer.Name })
+        notify("Blox Fruits", ev .. " found in this server!")
+    end
+end
+-- getgenv().AutoHop = "mirage"  -- or "kitsune" / "full_moon"
+local function autoHop(event)
+    local d = bfReq("GET", BF_URL .. "?project_id=" .. PROJECT_ID .. "&event=" .. event)
+    if not d or not d.servers then return end
+    for _, s in ipairs(d.servers) do
+        if s.job_id ~= game.JobId then
+            notify("Auto-Hop", "Teleporting to " .. event .. "...")
+            game:GetService("TeleportService"):TeleportToPlaceInstance(s.place_id, s.job_id, LocalPlayer)
+            return
+        end
+    end
+end
 task.spawn(function()
-    while task.wait(2) do
-        getNewMessages()
+    while task.wait(30) do
+        reportEvents()
+        if getgenv().AutoHop and #detectEvents() == 0 then autoHop(getgenv().AutoHop) end
     end
 end)
